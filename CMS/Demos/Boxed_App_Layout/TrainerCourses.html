@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Trainer Courses</title>
+
+        <!--BootStrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="../../public/vendor/spinkit.css"
+              rel="stylesheet">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="../../public/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="../../public/css/material-icons.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome Icons -->
+        <link type="text/css"
+              href="../../public/css/fontawesome.css"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="../../public/css/preloader.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="../../public/css/app.css"
+              rel="stylesheet">
+
+        <!--DataTable-->
+        <link href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body class="layout-boxed ">
+
+        <div class="preloader">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+
+            <!-- <div class="sk-bounce">
+                <div class="sk-bounce-dot"></div>
+                <div class="sk-bounce-dot"></div>
+            </div> -->
+
+            <!-- More spinner examples at https://github.com/tobiasahlin/SpinKit/blob/master/examples.html -->
+        </div>
+
+        <!-- Drawer Layout -->
+
+        <div class="mdk-drawer-layout js-mdk-drawer-layout"
+             data-push
+             data-responsive-width="992px">
+            <div class="mdk-drawer-layout__content page-content">
+
+                <!-- Header -->
+                <div id="HeaderDiv"></div>
+                <!-- // END Header -->
+
+                <!-- BEFORE Page Content -->
+
+                <!-- // END BEFORE Page Content -->
+
+                <!-- Page Content -->
+
+                <div class="page-section">
+                    <div class="container-fluid page__container">
+
+                        <div class="page-separator">
+                            <div class="page-separator__text">Trainer Courses</div>
+                        </div>
+
+                        <!------------------------------------------------------------------------------------------------->
+
+                        <!--DataTable-->
+                        <div class="row">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                    </div>
+                        
+                                    <div class="col-md-3" id="AddButton">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary ml-2" id="AddTrainer">
+                                            Add Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="container">
+                        
+                                <div class="section-content">
+                        
+                                    <div id="majors" class="row-border" style="width: 100%;">
+                                        <table id="tbl">
+                        
+                                            <thead>
+                                                <th style="width: 40%;"> Course Name: </th>
+                                                <th style="width: 35%;"> Create Date: </th>
+                                                <th style="width: 15%;"> Is Active: </th>
+                                                <th style="width: 5%;"> Edit: </th>
+                                                <th style="width: 5%;"> Delete: </th>
+                                            <thead>
+                        
+                                            <tbody>
+                        
+                                            </tbody>
+                        
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Modal -->
+                        
+                            <!-- jQuery -->
+                            <script src="../../public/vendor/jquery.min.js"></script>
+
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+                            crossorigin="anonymous"></script>
+                            <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+                        
+                            <script>
+                        
+                                $(document).ready(function(){
+                        
+                                    // Function to get the value of a query parameter from the URL using jQuery
+                                    function getQueryParam(name) {
+                                        const urlParams = new URLSearchParams(window.location.search);
+                                        return urlParams.get(name);
+                                    }
+
+                                    // Get the TrainerID from the URL
+                                    const trainerID = getQueryParam("TrainerID");
+
+                                    // // Check if TrainerID exists and do something with it
+                                    // if (trainerID) {
+                                    //     console.log("TrainerID:", trainerID);
+
+                                    //     // You can use the trainerID variable here for further processing
+                                    // } else {
+                                    //     console.error("TrainerID not found in the URL");
+                                    // }
+
+                                    //let url2 = "./";
+                                    const SelectAll = "SelectAll";
+                                    const SelectONE = "SelectOne";
+                                    const Insert = "Insert";
+                                    const Update = "Update";
+                                    const Delete = "Delete";
+                        
+                                    let dataTable = $("#tbl").DataTable({
+                                        "ajax": {
+                                            url: "../../api/TrainerCourses.php",
+                                            "dataSrc": "",
+                                            type: "POST",
+                                            data: {operation: SelectAll, TrainerID: trainerID},
+                                        },
+                                        destroy: true,
+                                        "deferRender": false,
+                                        "columns": [
+                                            {"data": "CourseName"},
+                                            {"data": "CreateDate"},
+                                            {
+                                                "data": "IsActive",
+                                                render: function (data, type, row) {
+                                                    if (data == 1) {
+                                                        return '<i class="fa fa-check text-success"></i>';
+                                                    } else {
+                                                        return '<i class="fa fa-times text-danger"></i>';
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "data": "CourseID",
+                                                render: function (data, type, row) {
+                                                    return `<button type="button" class="btn btn-info edit" data-id= ${data} >  
+                                                                <i class="fa fa-edit"></i>
+                                                            </button>`
+                        
+                                                }
+                                            },
+                                            {
+                                                "data": "CourseID",
+                                                render: function (data, type, row) {
+                                                    return `<button type = "button" class="btn btn-danger delete" data-id= ${data} >
+                                                                <i class="fa fa-trash"></i>
+                                                            </button>`;
+                                                }
+                                            }
+                        
+                                        ]
+                                    });
+                        
+                                    //delete
+                                    $("#tbl tbody").on("click", ".delete", function () {
+                                        if (confirm("Are you sure ?")) {
+                                            // get the id value stored in the edit button
+                                            let id = $(this).data("id");// from the button data-id
+                                            // get the row in which the edit button is located, in order to remove later when the delete is success
+                                            let row = $(this).parents("tr");
+                                            // compose the parameters to be sent to the php api
+                                            let str = "CourseID=" + id;
+                                            str += "&operation=" + Delete;
+                                            //console.log(str);
+                                            $.ajax({
+                                                url: "../../api/TrainerCourses.php",
+                                                data: str,
+                                                type: "post",
+                                                dataType: "json",
+                                                success: function (response) {
+                                                    // if delete is success then remove the current row
+                                                    dataTable.row(row).remove().draw();
+                                                },
+                                                error: function (E) {
+                                                    alert(E.status + E.statusText)
+                                                }
+                                            });
+                                        }
+                                    });
+                        
+                                    //Edit Trainer
+                                    $("#tbl tbody").on("click", ".edit", function () {
+                                        window.location.href = "AddEditCourses.html";
+                                    });
+                        
+                                    //Add Trainer
+                                    $("#AddTrainer").on("click", function () {
+                                        window.location.href = "AddEditCourses.html";
+                                    });
+                        
+                                });
+                        
+                        
+                            </script>
+                        </div>
+                        <!--EndDataTable-->
+
+                    </div>
+
+                </div>
+
+                <!-- // END Page Content -->
+
+                <!-- Footer -->
+                <div id="FooterDiv"></div>
+                <!-- // END Footer -->
+
+            </div>
+
+            <!-- // END drawer-layout__content -->
+
+            <!-- Drawer -->
+
+            <div class="mdk-drawer js-mdk-drawer"
+                 id="default-drawer">
+                <div class="mdk-drawer__content">
+                    <div class="sidebar sidebar-light sidebar-light-dodger-blue sidebar-left"
+                         data-perfect-scrollbar>
+
+                        <!-- Sidebar Content -->
+                        <div id="SideBarDiv"></div>
+                        <!-- // END Sidebar Content -->
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- // END Drawer -->
+
+        </div>
+
+        <!-- // END Drawer Layout -->
+
+        <!-- jQuery -->
+
+        <!-- Bootstrap -->
+        <script src="../../public/vendor/popper.min.js"></script>
+        <script src="../../public/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="../../public/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="../../public/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="../../public/vendor/material-design-kit.js"></script>
+
+        <!-- App JS -->
+        <script src="../../public/js/app.js"></script>
+        <script src="Header.js"></script>
+        <script src="Footer.js"></script>
+        <script src="SideBar.js"></script>
+
+        <!-- Preloader -->
+        <script src="../../public/js/preloader.js"></script>
+
+    </body>
+
+</html>

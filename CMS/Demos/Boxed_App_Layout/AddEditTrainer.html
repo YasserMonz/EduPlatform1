@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Account</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="../../public/vendor/spinkit.css"
+              rel="stylesheet">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="../../public/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="../../public/css/material-icons.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome Icons -->
+        <link type="text/css"
+              href="../../public/css/fontawesome.css"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="../../public/css/preloader.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="../../public/css/app.css"
+              rel="stylesheet">
+
+    </head>
+
+    <body class="layout-boxed ">
+
+        <div class="preloader">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+
+            <!-- <div class="sk-bounce">
+                <div class="sk-bounce-dot"></div>
+                <div class="sk-bounce-dot"></div>
+            </div> -->
+
+            <!-- More spinner examples at https://github.com/tobiasahlin/SpinKit/blob/master/examples.html -->
+        </div>
+
+        <!-- Drawer Layout -->
+
+        <div class="mdk-drawer-layout js-mdk-drawer-layout"
+             data-push
+             data-responsive-width="992px">
+            <div class="mdk-drawer-layout__content page-content">
+
+                <!-- Header -->
+
+                <!-- Navbar -->
+
+                <div class="navbar navbar-expand pr-0 navbar-dark navbar-dark-pickled-bluewood navbar-shadow"
+                     id="default-navbar"
+                     data-primary>
+
+                    <!-- Navbar Toggler -->
+
+                    <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0"
+                            type="button"
+                            data-toggle="sidebar">
+                        <span class="material-icons">short_text</span>
+                    </button>
+
+                    <!-- // END Navbar Toggler -->
+
+                    <!-- Navbar Brand -->
+
+                    <a href="index.html"
+                       class="navbar-brand mr-16pt d-lg-none">
+
+                        <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+                            <span class="avatar-title rounded bg-primary"><img src="../../public/images/illustration/student/128/white.svg"
+                                     alt="logo"
+                                     class="img-fluid" /></span>
+
+                        </span>
+
+                        <span class="d-none d-lg-block">Luma</span>
+                    </a>
+
+                    <!-- // END Navbar Brand -->
+
+                    <span class="d-none d-md-flex align-items-center mr-16pt">
+
+                        <span class="avatar avatar-sm mr-12pt">
+
+                            <span class="avatar-title rounded navbar-avatar"><i class="material-icons">trending_up</i></span>
+
+                        </span>
+
+                        <small class="flex d-flex flex-column">
+                            <strong class="navbar-text-100">Earnings</strong>
+                            <span class="navbar-text-50">&dollar;12.3k</span>
+                        </small>
+                    </span>
+                    <span class="d-none d-md-flex align-items-center mr-16pt">
+
+                        <span class="avatar avatar-sm mr-12pt">
+
+                            <span class="avatar-title rounded navbar-avatar"><i class="material-icons">receipt</i></span>
+
+                        </span>
+
+                        <small class="flex d-flex flex-column">
+                            <strong class="navbar-text-100">Sales</strong>
+                            <span class="navbar-text-50">264</span>
+                        </small>
+                    </span>
+
+                    <!-- Navbar Search -->
+
+                    <form class="search-form navbar-search d-none d-md-flex mr-16pt"
+                          action="index.html">
+                        <button class="btn"
+                                type="submit"><i class="material-icons">search</i></button>
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Search ...">
+                    </form>
+
+                    <!-- // END Navbar Search -->
+
+                    <div class="flex"></div>
+
+                    <!-- Navbar Menu -->
+
+                    <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
+
+                        <!-- Notifications dropdown -->
+                        <div class="nav-item dropdown dropdown-notifications dropdown-xs-down-full"
+                             data-toggle="tooltip"
+                             data-title="Messages"
+                             data-placement="bottom"
+                             data-boundary="window">
+                            <button class="nav-link btn-flush dropdown-toggle"
+                                    type="button"
+                                    data-toggle="dropdown"
+                                    data-caret="false">
+                                <i class="material-icons icon-24pt">mail_outline</i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div data-perfect-scrollbar
+                                     class="position-relative">
+                                    <div class="dropdown-header"><strong>Messages</strong></div>
+                                    <div class="list-group list-group-flush mb-0">
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action unread">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 minutes ago</small>
+
+                                                <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <img src="../../public/images/people/110/woman-5.jpg"
+                                                         alt="people"
+                                                         class="avatar-img rounded-circle">
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong class="text-black-100">Michelle</strong>
+                                                    <span class="text-black-70">Clients loved the new design.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 minutes ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <img src="../../public/images/people/110/woman-5.jpg"
+                                                         alt="people"
+                                                         class="avatar-img rounded-circle">
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong class="text-black-100">Michelle</strong>
+                                                    <span class="text-black-70">🔥 Superb job..</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // END Notifications dropdown -->
+
+                        <!-- Notifications dropdown -->
+                        <div class="nav-item ml-16pt dropdown dropdown-notifications dropdown-xs-down-full"
+                             data-toggle="tooltip"
+                             data-title="Notifications"
+                             data-placement="bottom"
+                             data-boundary="window">
+                            <button class="nav-link btn-flush dropdown-toggle"
+                                    type="button"
+                                    data-toggle="dropdown"
+                                    data-caret="false">
+                                <i class="material-icons">notifications_none</i>
+                                <span class="badge badge-notifications badge-accent">2</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div data-perfect-scrollbar
+                                     class="position-relative">
+                                    <div class="dropdown-header"><strong>System notifications</strong></div>
+                                    <div class="list-group list-group-flush mb-0">
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action unread">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">3 minutes ago</small>
+
+                                                <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 hours ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong class="text-black-100">Adrian. D</strong>
+                                                    <span class="text-black-70">Wants to join your private group.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">1 day ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your deploy was successful.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // END Notifications dropdown -->
+
+                        <div class="nav-item dropdown">
+                            <a href="#"
+                               class="nav-link d-flex align-items-center dropdown-toggle"
+                               data-toggle="dropdown"
+                               data-caret="false">
+
+                                <span class="avatar avatar-sm mr-8pt2">
+
+                                    <span class="avatar-title rounded-circle bg-primary"><i class="material-icons">account_box</i></span>
+
+                                </span>
+
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item"
+                                   href="edit-account.html">Edit Account</a>
+                                <a class="dropdown-item"
+                                   href="billing.html">Billing</a>
+                                <a class="dropdown-item"
+                                   href="billing-history.html">Payments</a>
+                                <a class="dropdown-item"
+                                   href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- // END Navbar Menu -->
+
+                </div>
+
+                <!-- // END Navbar -->
+
+                <!-- // END Header -->
+
+                <div class="pt-32pt">
+                    <div class="container-fluid page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
+                        <div class="flex d-flex flex-column flex-sm-row align-items-center">
+
+                            <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                                <h2 class="mb-0">Trainer Account</h2>
+
+                                <ol class="breadcrumb p-0 m-0">
+                                    <li class="breadcrumb-item">
+                                        <a href="index.html">Home</a>
+                                    </li>
+
+                                    <li class="breadcrumb-item">
+                                        <a href="Trainers.html">Trainers List</a>
+                                    </li>
+
+                                    <!-- <li class="breadcrumb-item active">
+
+                                        Edit Account
+
+                                    </li> -->
+
+                                </ol>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- BEFORE Page Content -->
+
+                <!-- // END BEFORE Page Content -->
+
+                <!-- Page Content -->
+
+                <div class="page-section container-fluid page__container">
+                    <div class="page-separator">
+                        <div class="page-separator__text"><span style="font-size: medium;">Trainer Info</span></div>
+                    </div>
+                    <div class="col-md-7 p-0">
+                        <div class="form-group">
+
+                            <label class="form-label">Your photo</label>
+
+                            <div class="media align-items-center">
+                                <a id="ProfilePhoto" class="media-left mr-16pt">
+                                    <img src="../../public/images/people/110/guy-3.jpg" alt="people" width="56" class="rounded-circle" id="PreviewImg"/>
+                                </a>
+
+                                <div class="media-body" hidden>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="InputProfileImg" accept="image/*">
+                                        <label class="custom-file-label" for="ProfileImg">Choose file</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="row" style="margin-top: 15px;">
+                                <div class="col-md-4">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="FirstName" placeholder="Your first name ...">
+                                    <!-- <small class="form-text text-muted">
+                                        Your profile name will be used as part of your public profile URL address.
+                                    </small> -->
+                                </div>
+    
+                                <div class="col-md-4">
+                                    <label class="form-label">Middle Name</label>
+                                    <input type="text" class="form-control" id="MiddleName" placeholder="Your middle name ...">
+                                </div>
+    
+                                <div class="col-md-4">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="LastName" placeholder="Your last name ...">
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-top: 15px;">
+                                <div class="col-md-6">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="Username" placeholder="Your username name ...">
+                                </div>
+    
+                                <div class="col-md-6">
+                                    <label class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="Password" placeholder="Your password name ...">
+                                        
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" id="ShowPassword">
+                                                <i class="fa fa-eye"></i>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+    
+                                <!-- <div class="col-md-4">
+                                    <label class="form-label">Gender</label>
+                                    <input type="text" class="form-control" placeholder="Your gender name ...">
+                                </div> -->
+                            </div>
+
+                            <div class="row" style="margin-top: 15px;">
+                                <div class="col-md-6">
+                                    <label class="form-label">Email</label>
+                                    <input type="emial" class="form-control" id="Email" placeholder="Your email name ...">
+                                </div>
+    
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" id="PhoneNumber" placeholder="Your phone number name ...">
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-top: 15px;">
+                                <div class="col-md-6">
+                                    <label class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" id="DateofBirth" placeholder="Your date of birth name ...">
+                                </div>
+    
+                                <div class="col-md-6">
+                                    <label class="form-label">Join Date</label>
+                                    <input type="date" class="form-control" id="JoinDate" placeholder="Your join date name ...">
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-top: 15px;">
+                                <div class="col-md-12">
+                                    <label class="form-label">Gender:</label>
+                                    <br>
+    
+                                    <input type="radio" id="Male" value="M" name="gender">
+                                    <label class="form-label"><span style="font-size: smaller;">Male</span></label>
+                                    <br>
+    
+                                    <input type="radio" id="Female" value="F" name="gender">
+                                    <label class="form-label"><span style="font-size: smaller;">Female</span></label>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <label class="form-label">About you</label>
+                            <textarea rows="3"
+                                      class="form-control"
+                                      placeholder="About you ..."></textarea>
+                        </div> -->
+
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="IsActive" checked>
+                                <label class="custom-control-label" for="IsActive">
+                                    Active
+                                </label>
+                                <small class="form-text text-muted">
+                                    If unchecked, this Trainer will not appear in the website.
+                                </small>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" id="SaveChanges">Save changes</button>
+                    </div>
+                </div>
+
+                <!-- // END Page Content -->
+
+                <!-- Footer -->
+                <div id="FooterDiv"></div>
+                <!-- // END Footer -->
+
+            </div>
+
+            <!-- // END drawer-layout__content -->
+
+            <!-- Drawer -->
+
+            <div class="mdk-drawer js-mdk-drawer"
+                 id="default-drawer">
+                <div class="mdk-drawer__content">
+                    <div class="sidebar sidebar-light sidebar-light-dodger-blue sidebar-left"
+                         data-perfect-scrollbar>
+
+                        <!-- Sidebar Content -->
+                        <div id="SideBarDiv"></div>
+                        <!-- // END Sidebar Content -->
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- // END Drawer -->
+
+        </div>
+
+        <!-- // END Drawer Layout -->
+
+        <!-- jQuery -->
+        <script src="../../public/vendor/jquery.min.js"></script>
+
+        <script>
+                        
+            $(document).ready(function(){
+
+                // //let url2 = "./";
+                const SelectAll = "SelectAll";
+                const SelectOne = "SelectOne";
+                const Insert = "Insert";
+                const Update = "Update";
+                const Delete = "Delete";
+                const Img = "Image";
+                const UserType = "TR";
+                let TrainerID;
+                let ImagePath;
+                // let ProfilePic;
+                // let formData;
+                // let file;
+
+                // Function to get the value of a query parameter from the URL using jQuery
+                function getQueryParam(name) {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    return urlParams.get(name);
+                }
+                // Get the TrainerID from the URL
+                let trainerID = getQueryParam("TrainerID");
+
+                if (trainerID == null){
+                    //Add
+                    TrainerID = -1;
+                }
+                else{
+                    //Edit
+                    TrainerID = trainerID;
+                    //console.log(TrainerID);
+                    $.ajax({
+                        url: "../../api/TrainersCrudOperation.php",
+                        data: {
+                            operation: SelectOne,
+                            UserID: TrainerID
+                        },
+                        type: "post",
+                        dataType: "json",
+                        success: function (response) {
+                            //console.log(response);
+                            if (response) { // Check for successful execution
+                                // Access and use the returned data here:
+                                let user = response[0]; // assuming 'data' contains a single user object
+                                
+                                // Extract individual values into variables:
+                                let userId = user.UserID;
+                                //console.log(userId);
+
+                                let userProfilePic = user.UserProfilePicPath;
+                                $("#PreviewImg").attr('src', userProfilePic);
+                                console.log(userProfilePic);
+
+                                let userFirstName = user.UserFirstName;
+                                $("#FirstName").val(userFirstName);
+                                //console.log(userFirstName);
+
+                                let userMiddleName = user.UserMiddleName;
+                                $("#MiddleName").val(userMiddleName);
+                                //console.log(userMiddleName);
+
+                                let userLastName = user.UserLastName;
+                                $("#LastName").val(userLastName);
+                                //console.log(userLastName);
+
+                                let userName = user.UserName;
+                                $("#Username").val(userName);
+                                //console.log(userName);
+
+                                let userPassword = user.UserPassword;
+                                $("#Password").val(userPassword);
+                                //console.log(userPassword);
+
+                                let userEmail = user.UserEmail;
+                                $("#Email").val(userEmail);
+                                //console.log(userEmail);
+
+                                let userTelephone = user.UserTelephone;
+                                $("#PhoneNumber").val(userTelephone);
+                                //console.log(userTelephone);
+
+                                let userGender = user.UserGender;
+                                $("input[name='gender']").filter(`[value='${userGender}']`).prop('checked', true);
+                                //console.log(userGender);
+
+                                let isActive = user.IsActive;
+                                $("#IsActive").prop("checked", isActive);
+                                //console.log(isActive);
+                                
+                                // Assuming user is defined and contains DateofBirth and JoinDate properties
+                                if (user && user.DateofBirth && user.DateofBirth.date) {
+                                    let dateOfBirth = new Date(user.DateofBirth.date);
+                                    let formattedDateOfBirth = dateOfBirth.getFullYear() + '-' + ('0' + (dateOfBirth.getMonth() + 1)).slice(-2) + '-' + ('0' + dateOfBirth.getDate()).slice(-2);
+                                    $("#DateofBirth").val(formattedDateOfBirth);
+                                } else {
+                                    console.error("Invalid or missing DateofBirth property in the user object.");
+                                }
+
+                                if (user && user.JoinDate && user.JoinDate.date) {
+                                    let joinDate = new Date(user.JoinDate.date);
+                                    let formattedJoinDate = joinDate.getFullYear() + '-' + ('0' + (joinDate.getMonth() + 1)).slice(-2) + '-' + ('0' + joinDate.getDate()).slice(-2);
+                                    $("#JoinDate").val(formattedJoinDate);
+                                } else {
+                                    console.error("Invalid or missing JoinDate property in the user object.");
+                                }
+
+                                //let userType = user.UserType;
+                                //console.log(userType);
+                                
+                                // ... repeat for other properties
+                                
+                            } else {
+                                // Handle errors if response.success is false
+                                alert("Error: " + response.message); // Assuming 'message' holds the error reason
+                                alert("im here")
+                            }
+                        },
+                        error: function (E) {
+                            alert(E.status + E.statusText)
+                        }
+                    });
+                }
+                //console.log(TrainerID);
+
+                //Show Password
+                $("#ShowPassword").click(function () {
+                    let Password = $("#Password");
+
+                    if (Password.attr("type") === "password") {
+                        Password.attr("type", "text");
+                        $("#ShowPassword i").removeClass("fa-eye").addClass("fa-eye-slash");
+                    } else {
+                        Password.attr("type", "password");
+                        $("#ShowPassword i").removeClass("fa-eye-slash").addClass("fa-eye");
+                    }
+                });
+
+                //Take img
+                $("#InputProfileImg").change(function(event) {
+                    //console.log(event);
+                    let reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        // Get the image path
+                        $("#PreviewImg").attr('src', e.target.result);
+                        ImagePath = event.target.files[0].name;
+                        //console.log(ImagePath);
+                    };
+
+                    reader.readAsDataURL(this.files[0]);
+                });
+
+                //Add image from photo
+                $("#ProfilePhoto").click(function() {
+                    $('#InputProfileImg').trigger('click');
+                });
+    
+                //Add Trainer
+                $("#SaveChanges").on("click", function () {
+                    let operation = (TrainerID == -1) ? "Insert" : "Update";   //if statement
+
+                    // set the value
+                    let UserID = TrainerID;
+                    let FirstName = $("#FirstName").val();
+                    let MiddleName = $("#MiddleName").val();
+                    let LastName = $("#LastName").val();
+                    let Username = $("#Username").val();
+                    let Password = $("#Password").val();
+                    let Email = $("#Email").val();
+                    let PhoneNumber = $("#PhoneNumber").val();
+                    let DateofBirth = $("#DateofBirth").val();
+                    let JoinDate = $("#JoinDate").val();
+                    // Get the value of the selected radio button
+                    let Gender = $("input[name='gender']:checked").val();
+                    // Get the value of the IsActive checkbox (1 for checked, 0 for unchecked)
+                    let IsActive = $("#IsActive").is(":checked") ? 1 : 0;
+
+                    let UserProfilePic = (ImagePath == null) ? null : ImagePath;
+                    console.log(UserProfilePic);
+
+                    $.ajax({
+                        url: "../../api/TrainersCrudOperation.php",
+                        data: {
+                            operation: operation,
+                            UserProfilePic: UserProfilePic,
+                            UserID: UserID,
+                            UserFirstName: FirstName,
+                            UserMiddleName: MiddleName,
+                            UserLastName: LastName,
+                            UserName: Username,
+                            UserPassword: Password,
+                            UserEmail: Email,
+                            UserTelephone: PhoneNumber,
+                            DateofBirth: DateofBirth,
+                            JoinDate: JoinDate,
+                            UserGender: Gender,
+                            IsActive: IsActive,
+                            UserType: UserType
+                        },
+                        type: "post",
+                        dataType: "json",
+                        success: function (response) {
+                            if (UserID == -1){
+                                alert("Trainer Added Sucsesfuly!")
+                            }
+                            else{
+                                alert("Trainer Edited Sucsesfuly!")
+                            }
+                        },
+                        error: function (E) {
+                            alert(E.status + E.statusText)
+                        }
+                    });
+
+                });
+
+            });
+    
+    
+        </script>
+
+        <!-- Bootstrap -->
+        <script src="../../public/vendor/popper.min.js"></script>
+        <script src="../../public/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="../../public/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="../../public/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="../../public/vendor/material-design-kit.js"></script>
+
+        <!-- App JS -->
+        <script src="../../public/js/app.js"></script>
+        <script src="Header.js"></script>
+        <script src="Footer.js"></script>
+        <script src="SideBar.js"></script>
+
+        <!-- Preloader -->
+        <script src="../../public/js/preloader.js"></script>
+
+    </body>
+
+</html>

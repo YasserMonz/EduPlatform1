@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+    <link type="text/css" href="../../public/vendor/spinkit.css" rel="stylesheet">
+    <link type="text/css" href="../../public/vendor/perfect-scrollbar.css" rel="stylesheet">
+    <link type="text/css" href="../../public/css/material-icons.css" rel="stylesheet">
+    <link type="text/css" href="../../public/css/fontawesome.css" rel="stylesheet">
+    <link type="text/css" href="../../public/css/preloader.css" rel="stylesheet">
+    <link type="text/css" href="../../public/css/app.css" rel="stylesheet">
+</head>
+<body class="layout-boxed ">
+    <div class="preloader">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+            <div id="HeaderDiv"></div>
+
+            <div class="pt-32pt pt-sm-64pt pb-32pt">
+                <div class="container-fluid page__container">
+
+                  <form action="#" id="LoginForm" class="col-md-5 p-0 mx-auto">
+                        <div class="form-group">
+                            <label class="form-label" for="UserEmail">Email:</label>
+                            <input type="text" class="form-control" id="UserEmail" placeholder="Your email address ..." autocomplete="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="UserPassword">Password:</label>
+                            <input type="password" class="form-control" id="UserPassword" placeholder="Your password ..." autocomplete="current-password">
+
+                            <p id="WrongLogin" class="text-left" style="color: red"></p>
+
+                            <p class="text-right">
+                                <a href="reset-password.html" class="small">Forgot your password?</a>
+                            </p>
+                        </div>
+    
+                    <div class="text-center">
+                        <button class="btn btn-primary" id="Login">Login</button>
+                    </div>
+</form>
+
+                </div>
+            </div>
+
+            <script src="../../public/vendor/jquery.min.js"></script>
+            <script>
+              $(document).ready(function() {
+    function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+    let courseID = getQueryParam("CourseID");
+
+    $("#LoginForm").submit(function(e) {
+        e.preventDefault();
+        let UserEmail = $("#UserEmail").val();
+        let UserPassword = $("#UserPassword").val();
+
+        if (UserEmail.trim() === '' || UserPassword.trim() === '') {
+            alert("Username and password are required.");
+            return;
+        }
+
+        $.ajax({
+            url: "../../api/jwtauthri.php",
+            data: { UserEmail: UserEmail, UserPassword: UserPassword },
+            type: "post",
+            dataType: "json",
+            success: function(response) {
+                if (response.state == "success") {
+                    let jwt = response.jwt;
+                    localStorage.setItem('jwt', jwt);
+                    $("#WrongLogin").html("");
+
+                    if (courseID == null) {
+                        window.location.href = "index.html";
+                    } else {
+                        window.location.href = "courses.html?CourseID=" + courseID;
+                    }
+                } else {
+                    $("#WrongLogin").html("Wrong Email or Password!");
+                }
+            },
+            error: function(E) {
+                alert(E.status + " " + E.statusText);
+            }
+        });
+    });
+});
+
+            </script>
+
+            <div id="FooterDiv"></div>
+        </div>
+    </div>
+
+    <script src="../../public/vendor/popper.min.js"></script>
+    <script src="../../public/vendor/bootstrap.min.js"></script>
+    <script src="../../public/vendor/perfect-scrollbar.min.js"></script>
+    <script src="../../public/vendor/dom-factory.js"></script>
+    <script src="../../public/vendor/material-design-kit.js"></script>
+    <script src="../../public/js/app.js"></script>
+    <script src="Header.js"></script>
+    <script src="Footer.js"></script>
+    <script src="loginpage.js"></script>
+    <script src="../../public/js/preloader.js"></script>
+</body>
+</html>

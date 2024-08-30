@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Portals</title>
+
+        <!--BootStrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="../../public/vendor/spinkit.css"
+              rel="stylesheet">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="../../public/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="../../public/css/material-icons.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome Icons -->
+        <link type="text/css"
+              href="../../public/css/fontawesome.css"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="../../public/css/preloader.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="../../public/css/app.css"
+              rel="stylesheet">
+
+        <!--DataTable-->
+        <link href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body class="layout-boxed ">
+
+        <div class="preloader">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+
+            <!-- <div class="sk-bounce">
+                <div class="sk-bounce-dot"></div>
+                <div class="sk-bounce-dot"></div>
+            </div> -->
+
+            <!-- More spinner examples at https://github.com/tobiasahlin/SpinKit/blob/master/examples.html -->
+        </div>
+
+        <!-- Drawer Layout -->
+
+        <div class="mdk-drawer-layout js-mdk-drawer-layout"
+             data-push
+             data-responsive-width="992px">
+            <div class="mdk-drawer-layout__content page-content">
+
+                <!-- Header -->
+                <div id="HeaderDiv"></div>
+                <!-- // END Header -->
+
+                <!-- BEFORE Page Content -->
+
+                <!-- // END BEFORE Page Content -->
+
+                <!-- Page Content -->
+
+                <div class="page-section">
+                    <div class="container-fluid page__container">
+
+                        <div class="page-separator">
+                            <div class="page-separator__text">Portals</div>
+                        </div>
+
+                        <!------------------------------------------------------------------------------------------------->
+
+                        <!--DataTable-->
+                        <div class="row">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                    </div>
+                        
+                                    <div class="col-md-3" id="AddButton">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary ml-2" data-bs-toggle="modal" data-bs-target="#myModal" id="AddPortal">
+                                            Add Portal
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="container">
+                        
+                                <div class="section-content">
+                        
+                                    <div id="majors" class="row-border" style="width: 100%;">
+                                        <table id="tbl">
+                        
+                                            <thead>
+                                                <th style="width: 25%;"> Portal Name: </th>
+                                                <th style="width: 30%;"> Portal Description: </th>
+                                                <th style="width: 20%;"> Is Active: </th>
+                                                <th style="width: 5%;"> Edit </th>
+                                                <th style="width: 5%;"> Delete </th>
+                                            <thead>
+                        
+                                            <tbody>
+                        
+                                            </tbody>
+                        
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <form class="modal-content" id="myForm">
+                        
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Portals</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                        
+                                        <div class="modal-body">
+                                            <input type="text" id="PortalID" name="PortalID" value="-1" hidden>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="PortalName" placeholder="Enter Portal Name" name="PortalName">
+                                                <label for="PortalName">Portal Name:</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="PortalDescription" placeholder="Enter Portal Description" name="PortalDescription">
+                                                <label for="PortalDescription">Portal Description:</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="IsActive" placeholder="Enter Is Active" name="IsActive">
+                                                <label for="IsActive">Is Active:</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" id="Save">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        
+                            <!-- jQuery -->
+                            <script src="../../public/vendor/jquery.min.js"></script>
+
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+                            crossorigin="anonymous"></script>
+                            <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+                        
+                            <script>
+                        
+                                $(document).ready(function(){
+                        
+                                    //let url2 = "./";
+                                    const SelectAll = "SelectAll";
+                                    const SelectONE = "SelectOne";
+                                    const Insert = "Insert";
+                                    const Update = "Update";
+                                    const Delete = "Delete";
+                        
+                                     let dataTable = $("#tbl").DataTable({
+                                        "ajax": {
+                                            url: "../../api/PortalCrudOperation.php",
+                                            "dataSrc": "",
+                                            type: "POST",
+                                            data: {operation: SelectAll},
+                                        },
+                                        destroy: true,
+                                        "deferRender": false,
+                                        "columns": [
+                                            {"data": "PortalName"},
+                                            {"data": "PortalDescription"},
+                                            {"data": "IsActive"},
+                                            {
+                                                "data": "PortalID",
+                                                render: function (data, type, row) {
+                                                    return `<button type="button" class="btn btn-primary edit" data-id= ${data} data-bs-toggle="modal" data-bs-target="#myModal">  
+                                                                Edit
+                                                            </button>`
+                        
+                                                }
+                                            },
+                                            {
+                                                "data": "PortalID",
+                                                render: function (data, type, row) {
+                                                    return `<button type = "button" class="btn btn-danger delete" data-id= ${data} >
+                                                                <i class="fa fa-trash"></i>
+                                                            </button>`;
+                                                }
+                                            }
+                        
+                                        ]
+                                    });
+                        
+                                    //delete
+                                    $("#tbl tbody").on("click", ".delete", function () {
+                                        if (confirm("Are you sure ?")) {
+                                            // get the id value stored in the edit button
+                                            let id = $(this).data("id");// from the button data-id
+                                            // get the row in which the edit button is located, in order to remove later when the delete is success
+                                            let row = $(this).parents("tr");
+                                            // compose the parameters to be sent to the php api
+                                            let str = "PortalID=" + id;
+                                            str += "&operation=" + Delete;
+                                            //console.log(str);
+                                            $.ajax({
+                                                url: "../../api/PortalCrudOperation.php",
+                                                data: str,
+                                                type: "post",
+                                                dataType: "json",
+                                                success: function (response) {
+                                                    // if delete is success then remove the current row
+                                                    dataTable.row(row).remove().draw();
+                                                },
+                                                error: function (E) {
+                                                    alert(E.status + E.statusText)
+                                                }
+                                            });
+                                        }
+                                    });
+                        
+                                    //modal form
+                                    $("#myModal").on("shown.bs.modal", function () {
+                                        // Set focus to the input when the modal is shown and select the text
+                                        $("#PortalName").focus();
+                                        $("#PortalName").select();
+                                    });
+                        
+                                    //edit
+                                    $("#tbl tbody").on("click", ".edit", function () {
+                                        // get the id value stored in the edit button
+                                        let id = $(this).data("id");// from the button data-id
+                                        // get the row in which the edit button is located, in order to update later when the update is success
+                                        let row = dataTable.row($(this).parents("tr"));
+                                        // get the data from the row
+                                        let rowData = row.data();
+                                        // get the value of the field 
+                                        let PortalName = rowData["PortalName"];
+                                        let PortalDescription = rowData["PortalDescription"];
+                                        let IsActive = rowData["IsActive"];
+                                        // set the value
+                                        $("#PortalID").val(id);
+                                        $("#PortalName").val(PortalName);
+                                        $("#PortalDescription").val(PortalDescription);
+                                        $("#IsActive").val(IsActive);
+                                    });
+                        
+                                    //model botton
+                                    $("#AddPortal").on("click", function () {
+                                        $("#PortalID").val(-1);
+                                        $("#PortalName").val("");
+                                        $("#PortalDescription").val("");
+                                        $("#IsActive").val("");
+                                    })
+                        
+                                    $("#Save").on("click", function () {
+                                        str = decodeURIComponent($("#myForm").serialize());
+                                        let id = $("#PortalID").val();	// get the value of the id  input text that is hidden in the modal form
+                                        // if (id == -1) {
+                                        // 	str = str + "&action=insert"
+                                        // } else {
+                                        // 	str = str + "&action=update"
+                                        // }
+                                        // the previous code could be replaced with a ternary operator:
+                                        //////////////////
+                                        let operation = (id == -1) ? "Insert" : "Update"; //if statement
+                                        str += "&operation=" + operation;
+                                        /////////////////////
+                                        // call the php api to update or insert the data
+                                        $.ajax({
+                                            url: "../../api/PortalCrudOperation.php",
+                                            data: str,
+                                            type: "post",
+                                            dataType: "json",
+                                            success: function (response) {
+                                                // create a new row with the data returned from api
+                                                let newRowData = {
+                                                    PortalID: response.PortalID,
+                                                    PortalName: response.PortalName,
+                                                    PortalDescription: response.PortalDescription,
+                                                    IsActive: response.IsActive,
+                                                }
+                                                if (id == -1) {
+                                                    // if the operation is insert then add the row to the data table
+                                                    dataTable.row.add(newRowData).draw();
+                                                    console.log(newRowData);
+                                                } else {
+                                                    // if it is update then modify the row in the data table
+                                                    // first get the row index of the row that contains the id
+                                                    let rowId = dataTable.row(function (idx, data, node) {
+                                                        return data["PortalID"] == id;
+                                                    });
+                                                    console.log(newRowData);
+                                                    if (rowId.any()) {
+                                                        // Get the index of the found row
+                                                        let rowIndex = rowId.index();
+                        
+                                                        // Now you have the index of the row
+                                                        console.log("Found row at index:", rowIndex);
+                                                    }
+                                                    else {
+                                                        console.log('Row not found.');
+                                                    }
+                                                    // var rowIndex = rowId[0][0]
+                                                    let rowIndex = rowId.index();
+                                                    // console.log(rowIndex);
+                                                    dataTable.row(rowIndex).data(newRowData).draw();
+                        
+                                                }
+                                                $("#myModal").modal("hide");
+                        
+                                            },
+                                            error: function (E) {
+                                                alert(E.status + E.statusText)
+                                            }
+                                        });
+                                    })
+                        
+                                });
+                        
+                        
+                            </script>
+                        </div>
+                        <!--EndDataTable-->
+
+                    </div>
+
+                </div>
+
+                <!-- // END Page Content -->
+
+                <!-- Footer -->
+                <div id="FooterDiv"></div>
+                <!-- // END Footer -->
+
+            </div>
+
+            <!-- // END drawer-layout__content -->
+
+            <!-- Drawer -->
+
+            <div class="mdk-drawer js-mdk-drawer"
+                 id="default-drawer">
+                <div class="mdk-drawer__content">
+                    <div class="sidebar sidebar-light sidebar-light-dodger-blue sidebar-left"
+                         data-perfect-scrollbar>
+
+                        <!-- Sidebar Content -->
+                        <div id="SideBarDiv"></div>
+                        <!-- // END Sidebar Content -->
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- // END Drawer -->
+
+        </div>
+
+        <!-- // END Drawer Layout -->
+
+        <!-- jQuery -->
+
+        <!-- Bootstrap -->
+        <script src="../../public/vendor/popper.min.js"></script>
+        <script src="../../public/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="../../public/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="../../public/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="../../public/vendor/material-design-kit.js"></script>
+
+        <!-- App JS -->
+        <script src="../../public/js/app.js"></script>
+        <script src="Header.js"></script>
+        <script src="Footer.js"></script>
+        <script src="SideBar.js"></script>
+
+        <!-- Preloader -->
+        <script src="../../public/js/preloader.js"></script>
+
+    </body>
+
+</html>

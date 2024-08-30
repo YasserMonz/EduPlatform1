@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Course Info</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="../../public/vendor/spinkit.css"
+              rel="stylesheet">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="../../public/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="../../public/css/material-icons.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome Icons -->
+        <link type="text/css"
+              href="../../public/css/fontawesome.css"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="../../public/css/preloader.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="../../public/css/app.css"
+              rel="stylesheet">
+        
+        <!-- Quill Theme -->
+        <link type="text/css"
+              href="../../public/css/quill.css"
+              rel="stylesheet">
+        
+        <!-- Select2 -->
+        <link type="text/css"
+              href="../../public/vendor/select2/select2.min.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="../../public/css/select2.css"
+              rel="stylesheet">
+
+    </head>
+
+    <body class="layout-boxed ">
+
+        <div class="preloader">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+
+            <!-- <div class="sk-bounce">
+                <div class="sk-bounce-dot"></div>
+                <div class="sk-bounce-dot"></div>
+            </div> -->
+
+            <!-- More spinner examples at https://github.com/tobiasahlin/SpinKit/blob/master/examples.html -->
+        </div>
+
+        <!-- Drawer Layout -->
+
+        <div class="mdk-drawer-layout js-mdk-drawer-layout"
+             data-push
+             data-responsive-width="992px">
+            <div class="mdk-drawer-layout__content page-content">
+
+                <!-- Header -->
+
+                <!-- Navbar -->
+
+                <div class="navbar navbar-expand pr-0 navbar-dark navbar-dark-pickled-bluewood navbar-shadow"
+                     id="default-navbar"
+                     data-primary>
+
+                    <!-- Navbar Toggler -->
+
+                    <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0"
+                            type="button"
+                            data-toggle="sidebar">
+                        <span class="material-icons">short_text</span>
+                    </button>
+
+                    <!-- // END Navbar Toggler -->
+
+                    <!-- Navbar Brand -->
+
+                    <a href="index.html"
+                       class="navbar-brand mr-16pt d-lg-none">
+
+                        <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+                            <span class="avatar-title rounded bg-primary"><img src="../../public/images/illustration/student/128/white.svg"
+                                     alt="logo"
+                                     class="img-fluid" /></span>
+
+                        </span>
+
+                        <span class="d-none d-lg-block">Luma</span>
+                    </a>
+
+                    <!-- // END Navbar Brand -->
+
+                    <span class="d-none d-md-flex align-items-center mr-16pt">
+
+                        <span class="avatar avatar-sm mr-12pt">
+
+                            <span class="avatar-title rounded navbar-avatar"><i class="material-icons">trending_up</i></span>
+
+                        </span>
+
+                        <small class="flex d-flex flex-column">
+                            <strong class="navbar-text-100">Earnings</strong>
+                            <span class="navbar-text-50">&dollar;12.3k</span>
+                        </small>
+                    </span>
+                    <span class="d-none d-md-flex align-items-center mr-16pt">
+
+                        <span class="avatar avatar-sm mr-12pt">
+
+                            <span class="avatar-title rounded navbar-avatar"><i class="material-icons">receipt</i></span>
+
+                        </span>
+
+                        <small class="flex d-flex flex-column">
+                            <strong class="navbar-text-100">Sales</strong>
+                            <span class="navbar-text-50">264</span>
+                        </small>
+                    </span>
+
+                    <!-- Navbar Search -->
+
+                    <form class="search-form navbar-search d-none d-md-flex mr-16pt"
+                          action="index.html">
+                        <button class="btn"
+                                type="submit"><i class="material-icons">search</i></button>
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Search ...">
+                    </form>
+
+                    <!-- // END Navbar Search -->
+
+                    <div class="flex"></div>
+
+                    <!-- Navbar Menu -->
+
+                    <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
+
+                        <!-- Notifications dropdown -->
+                        <div class="nav-item dropdown dropdown-notifications dropdown-xs-down-full"
+                             data-toggle="tooltip"
+                             data-title="Messages"
+                             data-placement="bottom"
+                             data-boundary="window">
+                            <button class="nav-link btn-flush dropdown-toggle"
+                                    type="button"
+                                    data-toggle="dropdown"
+                                    data-caret="false">
+                                <i class="material-icons icon-24pt">mail_outline</i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div data-perfect-scrollbar
+                                     class="position-relative">
+                                    <div class="dropdown-header"><strong>Messages</strong></div>
+                                    <div class="list-group list-group-flush mb-0">
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action unread">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 minutes ago</small>
+
+                                                <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <img src="../../public/images/people/110/woman-5.jpg"
+                                                         alt="people"
+                                                         class="avatar-img rounded-circle">
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong class="text-black-100">Michelle</strong>
+                                                    <span class="text-black-70">Clients loved the new design.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 minutes ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <img src="../../public/images/people/110/woman-5.jpg"
+                                                         alt="people"
+                                                         class="avatar-img rounded-circle">
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong class="text-black-100">Michelle</strong>
+                                                    <span class="text-black-70">🔥 Superb job..</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // END Notifications dropdown -->
+
+                        <!-- Notifications dropdown -->
+                        <div class="nav-item ml-16pt dropdown dropdown-notifications dropdown-xs-down-full"
+                             data-toggle="tooltip"
+                             data-title="Notifications"
+                             data-placement="bottom"
+                             data-boundary="window">
+                            <button class="nav-link btn-flush dropdown-toggle"
+                                    type="button"
+                                    data-toggle="dropdown"
+                                    data-caret="false">
+                                <i class="material-icons">notifications_none</i>
+                                <span class="badge badge-notifications badge-accent">2</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div data-perfect-scrollbar
+                                     class="position-relative">
+                                    <div class="dropdown-header"><strong>System notifications</strong></div>
+                                    <div class="list-group list-group-flush mb-0">
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action unread">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">3 minutes ago</small>
+
+                                                <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 hours ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong class="text-black-100">Adrian. D</strong>
+                                                    <span class="text-black-70">Wants to join your private group.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">1 day ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your deploy was successful.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // END Notifications dropdown -->
+
+                        <div class="nav-item dropdown">
+                            <a href="#"
+                               class="nav-link d-flex align-items-center dropdown-toggle"
+                               data-toggle="dropdown"
+                               data-caret="false">
+
+                                <span class="avatar avatar-sm mr-8pt2">
+
+                                    <span class="avatar-title rounded-circle bg-primary"><i class="material-icons">account_box</i></span>
+
+                                </span>
+
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item"
+                                   href="edit-account.html">Edit Account</a>
+                                <a class="dropdown-item"
+                                   href="billing.html">Billing</a>
+                                <a class="dropdown-item"
+                                   href="billing-history.html">Payments</a>
+                                <a class="dropdown-item"
+                                   href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- // END Navbar Menu -->
+
+                </div>
+
+                <!-- // END Navbar -->
+
+                <!-- // END Header -->
+
+                <div class="pt-32pt">
+                    <div class="container-fluid page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
+                        <div class="flex d-flex flex-column flex-sm-row align-items-center">
+
+                            <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                                <h2 class="mb-0">Course Info</h2>
+
+                                <ol class="breadcrumb p-0 m-0">
+                                    <li class="breadcrumb-item">
+                                        <a href="index.html">Home</a>
+                                    </li>
+
+                                    <li class="breadcrumb-item active">
+                                        Edit Course
+                                    </li>
+                                </ol>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- BEFORE Page Content -->
+
+                <!-- // END BEFORE Page Content -->
+
+                <!-- Page Content -->
+
+                <div class="page-section border-bottom-2">
+                    <div class="container-fluid page__container">
+
+                        <div class="row">
+
+                            <div class="col-md-8">
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Basic information</div>
+                                </div>
+
+                                <label class="form-label">Course title:</label>
+                                <div class="form-group mb-24pt">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Course title">
+                                </div>
+
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label">Description:</label>
+                                    <!-- <textarea class="form-control" rows="3" placeholder="Course description"></textarea> -->
+                                    <div style="height: 150px;" class="mb-0" data-toggle="quill">
+                                    </div>
+                                    <small class="form-text text-muted">Shortly describe this course.</small>
+                                </div>
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Sections:</div>
+                                </div>
+
+                                <div class="accordion js-accordion accordion--boxed mb-24pt"
+                                     id="parent">
+                                    <div class="accordion__item">
+                                        <a href="#"
+                                           class="accordion__toggle collapsed"
+                                           data-toggle="collapse"
+                                           data-target="#course-toc-1"
+                                           data-parent="#parent">
+                                            <span class="flex">Course Overview</span>
+                                            <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                        </a>
+                                        <div class="accordion__menu collapse"
+                                             id="course-toc-1">
+                                            <div class="accordion__menu-link">
+                                                <i class="material-icons text-70 icon-16pt icon--left">drag_handle</i>
+                                                <a class="flex"
+                                                   href="student-lesson.html">Watch Trailer</a>
+                                                <span class="text-muted">1m 10s</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion__item open">
+                                        <a href="#"
+                                           class="accordion__toggle"
+                                           data-toggle="collapse"
+                                           data-target="#course-toc-2"
+                                           data-parent="#parent">
+                                            <span class="flex">Getting Started with Angular</span>
+                                            <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                        </a>
+                                        <div class="accordion__menu collapse show"
+                                             id="course-toc-2">
+                                            <div class="accordion__menu-link">
+                                                <i class="material-icons text-70 icon-16pt icon--left">drag_handle</i>
+                                                <a class="flex"
+                                                   href="student-lesson.html">Introduction</a>
+                                                <span class="text-muted">8m 42s</span>
+                                            </div>
+                                            <div class="accordion__menu-link active">
+                                                <i class="material-icons text-70 icon-16pt icon--left">drag_handle</i>
+                                                <a class="flex"
+                                                   href="student-lesson.html">Introduction to TypeScript</a>
+                                                <span class="text-muted">50m 13s</span>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <i class="material-icons text-70 icon-16pt icon--left">drag_handle</i>
+                                                <a class="flex"
+                                                   href="student-lesson.html">Comparing Angular to AngularJS</a>
+                                                <span class="text-muted">12m 10s</span>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <i class="material-icons text-70 icon-16pt icon--left">drag_handle</i>
+                                                <a class="flex"
+                                                   href="student-take-quiz.html">Quiz: Getting Started With Angular</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion__item">
+                                        <a href="#"
+                                           class="accordion__toggle collapsed"
+                                           data-toggle="collapse"
+                                           data-target="#course-toc-3"
+                                           data-parent="#parent">
+                                            <span class="flex">Creating and Communicating Between Angular Components</span>
+                                            <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                        </a>
+                                        <div class="accordion__menu collapse"
+                                             id="course-toc-3">
+                                            <div class="accordion__menu-link">
+                                                <i class="material-icons text-70 icon-16pt icon--left">drag_handle</i>
+                                                <a class="flex"
+                                                   href="student-lesson.html">Angular Components</a>
+                                                <span class="text-muted">04:23</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion__item">
+                                        <a href="#"
+                                           class="accordion__toggle collapsed"
+                                           data-toggle="collapse"
+                                           data-target="#course-toc-4"
+                                           data-parent="#parent">
+                                            <span class="flex">Exploring the Angular Template Syntax</span>
+                                            <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                        </a>
+                                        <div class="accordion__menu collapse"
+                                             id="course-toc-4">
+                                            <div class="accordion__menu-link">
+                                                <i class="material-icons text-70 icon-16pt icon--left">drag_handle</i>
+                                                <a class="flex"
+                                                   href="student-lesson.html">Template Syntax</a>
+                                                <span class="text-muted">04:23</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="btn btn-outline-secondary mb-24pt mb-sm-0">Add Section</a>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                        <a href="#" class="btn btn-primary">Save changes</a>
+                                    </div>
+                                    <div class="list-group list-group-flush">
+                                        <div class="list-group-item">
+                                            <a href="#" class="text-danger"><strong>Delete Course</strong></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Video:</div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item"
+                                                src="https://player.vimeo.com/video/97243285?title=0&amp;byline=0&amp;portrait=0"
+                                                allowfullscreen=""></iframe>
+                                    </div>
+                                    <div class="card-body">
+                                        <label class="form-label">URL</label>
+                                        <input type="text"
+                                               class="form-control"
+                                               value="https://player.vimeo.com/video/97243285?title=0&amp;byline=0&amp;portrait=0"
+                                               placeholder="Enter Video URL">
+                                        <small class="form-text text-muted">Enter a valid video URL.</small>
+                                    </div>
+                                </div>
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Options:</div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label class="form-label">Category</label>
+                                            <select name="category"
+                                                    class="form-control custom-select">
+                                                <option value="vuejs">VueJs</option>
+                                                <option value="vuejs">Angular</option>
+                                                <option value="vuejs">React</option>
+                                            </select>
+                                            <small class="form-text text-muted">Select a category.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Price</label>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-group form-inline">
+                                                        <span class="input-group-prepend"><span class="input-group-text">$</span></span>
+                                                        <input type="text" class="form-control" value="5.00">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <small class="form-text text-muted">The recommended price in $</small>
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <div class="form-group">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked id="customCheck2">
+                                                    <label class="custom-control-label" for="customCheck2">
+                                                        Active
+                                                    </label>
+                                                    <small class="form-text text-muted">
+                                                        If unchecked, this Course will not appear in the website.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- // END Page Content -->
+
+                <!-- Footer -->
+                <div id="FooterDiv"></div>
+                <!-- // END Footer -->
+
+            </div>
+
+            <!-- // END drawer-layout__content -->
+
+            <!-- Drawer -->
+
+            <div class="mdk-drawer js-mdk-drawer"
+                 id="default-drawer">
+                <div class="mdk-drawer__content">
+                    <div class="sidebar sidebar-light sidebar-light-dodger-blue sidebar-left"
+                         data-perfect-scrollbar>
+
+                        <!-- Sidebar Content -->
+                        <div id="SideBarDiv"></div>
+                        <!-- // END Sidebar Content -->
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- // END Drawer -->
+
+        </div>
+
+        <!-- // END Drawer Layout -->
+
+        <!-- jQuery -->
+        <script src="../../public/vendor/jquery.min.js"></script>
+
+        <script>
+                        
+            $(document).ready(function(){
+    
+                // //let url2 = "./";
+                // const SelectAll = "SelectAll";
+                // const SelectONE = "SelectOne";
+                // const Insert = "Insert";
+                // const Update = "Update";
+                // const Delete = "Delete";
+    
+                // let dataTable = $("#tbl").DataTable({
+                //     "ajax": {
+                //         url: "../../api/TrainersCrudOperation.php",
+                //         "dataSrc": "",
+                //         type: "POST",
+                //         data: {operation: SelectAll},
+                //     },
+                //     destroy: true,
+                //     "deferRender": false,
+                //     "columns": [
+                //         {"data": "UserName"},
+                //         {"data": "UserTelephone"},
+                //         {"data": "UserEmail"},
+                //         {
+                //             "data": "IsActive",
+                //             render: function (data, type, row) {
+                //                 if (data == 1) {
+                //                     return '<i class="fa fa-check text-success"></i>';
+                //                 } else {
+                //                     return '<i class="fa fa-times text-danger"></i>';
+                //                 }
+                //             }
+                //         },
+                //         {
+                //             "data": "UserID",
+                //             render: function (data, type, row) {
+                //                 return `<button type="button" class="btn btn-info edit" data-id= ${data} data-bs-toggle="modal" data-bs-target="#myModal">  
+                //                             <i class="fa fa-edit"></i>
+                //                         </button>`
+    
+                //             }
+                //         },
+                //         {
+                //             "data": "UserID",
+                //             render: function (data, type, row) {
+                //                 return `<button type = "button" class="btn btn-danger delete" data-id= ${data} >
+                //                             <i class="fa fa-trash"></i>
+                //                         </button>`;
+                //             }
+                //         },
+                //         {
+                //             "data": "UserID",
+                //             render: function (data, type, row) {
+                //                 return `<button type = "button" class="btn btn-success courses" data-id= ${data} >
+                //                             <i class="fa fa-book-open"></i>
+                //                         </button>`;
+                //             }
+                //         }
+    
+                //     ]
+                // });
+    
+                // //Delete
+                // $("#tbl tbody").on("click", ".delete", function () {
+                //     if (confirm("Are you sure ?")) {
+                //         // get the id value stored in the edit button
+                //         let id = $(this).data("id");// from the button data-id
+                //         // get the row in which the edit button is located, in order to remove later when the delete is success
+                //         let row = $(this).parents("tr");
+                //         // compose the parameters to be sent to the php api
+                //         let str = "UserID=" + id;
+                //         str += "&operation=" + Delete;
+                //         //console.log(str);
+                //         $.ajax({
+                //             url: "../../api/TrainersCrudOperation.php",
+                //             data: str,
+                //             type: "post",
+                //             dataType: "json",
+                //             success: function (response) {
+                //                 // if delete is success then remove the current row
+                //                 dataTable.row(row).remove().draw();
+                //             },
+                //             error: function (E) {
+                //                 alert(E.status + E.statusText)
+                //             }
+                //         });
+                //     }
+                // });
+    
+                // //Edit
+                // $("#tbl tbody").on("click", ".edit", function () {
+                //     // get the id value stored in the edit button
+                //     let id = $(this).data("id");// from the button data-id
+                //     // get the row in which the edit button is located, in order to update later when the update is success
+                //     let row = dataTable.row($(this).parents("tr"));
+                //     // get the data from the row
+                //     let rowData = row.data();
+                //     // get the value of the field 
+                //     let PortalName = rowData["PortalName"];
+                //     let PortalDescription = rowData["PortalDescription"];
+                //     let IsActive = rowData["IsActive"];
+                //     // set the value
+                //     $("#PortalID").val(id);
+                //     $("#PortalName").val(PortalName);
+                //     $("#PortalDescription").val(PortalDescription);
+                //     $("#IsActive").val(IsActive);
+                //     window.location.href = "AddEditTrainer.html";
+                // });
+
+                // //Courses
+                // $("#tbl tbody").on("click", ".courses", function () {
+                //     // get the id value stored in the edit button
+                //     let id = $(this).data("id");// from the button data-id
+                //     window.location.href = "TrainerCourses.html?TrainerID=" + id;
+                //     $.ajax({
+                //             url: "../../api/TrainerCourses.php",
+                //             data: {TrainerID: id},
+                //             type: "post",
+                //             dataType: "json",
+                //             success: function (response) {
+                //                 window.location.href = "TrainerCourses.html?TrainerID=" + id;
+                //             },
+                //             error: function (E) {
+                //                 alert(E.status + E.statusText)
+                //             }
+                //         });
+                // });
+    
+                // //Add botton
+                // $("#AddTrainer").on("click", function () {
+                //     window.location.href = "AddEditTrainer.html";
+                // })
+    
+                // $("#Save").on("click", function () {
+                //     str = decodeURIComponent($("#myForm").serialize());
+                //     let id = $("#PortalID").val();	// get the value of the id  input text that is hidden in the modal form
+                //     // if (id == -1) {
+                //     // 	str = str + "&action=insert"
+                //     // } else {
+                //     // 	str = str + "&action=update"
+                //     // }
+                //     // the previous code could be replaced with a ternary operator:
+                //     //////////////////
+                //     let operation = (id == -1) ? "Insert" : "Update"; //if statement
+                //     str += "&operation=" + operation;
+                //     /////////////////////
+                //     // call the php api to update or insert the data
+                //     $.ajax({
+                //         url: "../../api/PortalCrudOperation.php",
+                //         data: str,
+                //         type: "post",
+                //         dataType: "json",
+                //         success: function (response) {
+                //             // create a new row with the data returned from api
+                //             let newRowData = {
+                //                 PortalID: response.PortalID,
+                //                 PortalName: response.PortalName,
+                //                 PortalDescription: response.PortalDescription,
+                //                 IsActive: response.IsActive,
+                //             }
+                //             if (id == -1) {
+                //                 // if the operation is insert then add the row to the data table
+                //                 dataTable.row.add(newRowData).draw();
+                //                 console.log(newRowData);
+                //             } else {
+                //                 // if it is update then modify the row in the data table
+                //                 // first get the row index of the row that contains the id
+                //                 let rowId = dataTable.row(function (idx, data, node) {
+                //                     return data["PortalID"] == id;
+                //                 });
+                //                 console.log(newRowData);
+                //                 if (rowId.any()) {
+                //                     // Get the index of the found row
+                //                     let rowIndex = rowId.index();
+    
+                //                     // Now you have the index of the row
+                //                     console.log("Found row at index:", rowIndex);
+                //                 }
+                //                 else {
+                //                     console.log('Row not found.');
+                //                 }
+                //                 // var rowIndex = rowId[0][0]
+                //                 let rowIndex = rowId.index();
+                //                 // console.log(rowIndex);
+                //                 dataTable.row(rowIndex).data(newRowData).draw();
+    
+                //             }
+                //             $("#myModal").modal("hide");
+    
+                //         },
+                //         error: function (E) {
+                //             alert(E.status + E.statusText)
+                //         }
+                //     });
+                // })
+    
+            });
+    
+    
+        </script>
+
+        <!-- Bootstrap -->
+        <script src="../../public/vendor/popper.min.js"></script>
+        <script src="../../public/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="../../public/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="../../public/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="../../public/vendor/material-design-kit.js"></script>
+
+        <!-- App JS -->
+        <script src="../../public/js/app.js"></script>
+        <script src="Header.js"></script>
+        <script src="Footer.js"></script>
+        <script src="SideBar.js"></script>
+
+        <!-- Preloader -->
+        <script src="../../public/js/preloader.js"></script>
+
+        <!-- Quill -->
+        <script src="../../public/vendor/quill.min.js"></script>
+        <script src="../../public/js/quill.js"></script>
+        <!-- Select2 -->
+        <script src="../../public/vendor/select2/select2.min.js"></script>
+        <script src="../../public/js/select2.js"></script>
+
+    </body>
+
+</html>
